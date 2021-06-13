@@ -102,6 +102,7 @@ main :-
 
 > Haskell
 ```haskell
+-- this will solve the symbol table of summing
 evalTable :: Table
 evalTable = evalStat summing []
 
