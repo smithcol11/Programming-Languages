@@ -1,0 +1,59 @@
+% Colin Smith
+% CS 320
+% HW3 - Prolog
+% April 19th, 2021
+
+% reference hw3 file
+:- consult(hw3).
+
+:- begin_tests(expr).
+  % checks if the total expressions is correct
+  test(total) :- 
+    nl,
+    aggregate_all(count, exprSize(4), T),
+    C is 79,
+    write('Total is '), write(T), nl,
+    write('Count is '), write(C), nl,
+    T =:= C.
+
+  % makes sure base case is functioning
+  test(sampleBase) :-
+    nl,
+    expr(Y, 1),
+    X is 10,
+    write('Y is '), write(Y), nl,
+    write('base is '), write(X), nl,
+    X =:= Y,
+    !.
+
+  % Tests a simple expression to see if math is correct
+  test(sample1) :-
+    nl,
+    expr(Y, 4),
+    write('Y is '), write(Y), nl,
+    X is 10+(10+(10+10)),
+    write('sample1 is '), write(X), nl,
+    X =:= Y,
+    !.
+
+  % this tests the max values for our printed results
+  test(max) :-
+    nl,
+    Max is 9,
+    between(0, 9, A),
+    A =< Max,
+    write('A is less than or equal to 9.'), nl,
+    !.
+
+  % Tests the min values for our printed results
+  test(min) :-
+    nl,
+    Min is 0,
+    between(0, 9, A),
+    A >= Min,
+    write('A is greater than or equal to 0'), nl,
+    !.
+
+:- end_tests(expr).
+
+:- run_tests.
