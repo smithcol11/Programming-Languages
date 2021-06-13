@@ -1,0 +1,2 @@
+# Programming-Languages
+A class I took at Portland State University had us working with a few different languages in some abstract ways. For this class we used Java, Prolog, and Haskell. The programs were different from anything I had done before. I used each language to accomplish similar tasks. First, I wrote a program in each language to construct arithmetic functions using 10 and the operators (+, -, *, /). The second set of programs was to create statements of expressions. For this, I needed to use hashtables in Java, and symbol tables in Prolog and Haskell.
